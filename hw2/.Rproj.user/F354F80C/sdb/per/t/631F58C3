@@ -1,0 +1,17 @@
+{
+    "contents" : "K <- 5;\nL <- 10;\nK;\n\nn = 20;\nalpha = 0.01;\nx = rnorm(n, mean=10.5, sd=1.3);\n\nhypothesisTest = t.test(x, mu=10, alternative = \"greater\", conf.level = 1-alpha);\nprint(hypothesisTest);\n\ntestT <- abs(mean(x) - 10)/(sqrt(var(x))/sqrt(20));\ntestT;\n\nn <- length(x);\ncriticalValue <- qt(alpha, 19, lower.tail = FALSE);\navgX <- mean(x);\nstdDev <- sd(x);\nsqrtn <- sqrt(n);\nintv <- criticalValue*(stdDev/sqrtn);\n\nconfidence <- c(avgX - intv, +Inf);\n\n\n\n\n",
+    "created" : 1399593029931.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3894048062",
+    "id" : "631F58C3",
+    "lastKnownWriteTime" : 1399660200,
+    "path" : "~/Documents/CVUT/SEM2/MIE-SPI/hw2/hw2.R",
+    "project_path" : "hw2.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "#3.4\nsequenceLength = 2500000;\n\n\nsampleSize = L*40;\ntime1 = time2 = numeric(sampleSize); # Declare an array\nfor(i in 1:sampleSize){\n  x = runif(sequenceLength, 0, 100); # Generate the sequence to be sorted\n  time1[i] = system.time(x1 <- sort(x, method = \"quick\"),  gcFirst = TRUE)[1];\n}\nsampleSize2 = L*35;\nfor(i in 1:sampleSize2){\n  x = runif(sequenceLength, 0, 100); # Generate the sequence to be sorted\n  time2[i] = system.time(x2 <- sort(x, method = \"shell\"), gcFirst = TRUE)[1];\n}\n\nalpha <- K/100;\nt.test(time1, y=time2, paired = FALSE, alternative=\"less\", var.equal = FALSE, conf.level = 1-alpha)\n",
+    "created" : 1399594291056.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1772728154",
+    "id" : "5E282A6E",
+    "lastKnownWriteTime" : 1399594943,
+    "path" : "~/Documents/CVUT/SEM2/MIE-SPI/hw2/3.4.R",
+    "project_path" : "3.4.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

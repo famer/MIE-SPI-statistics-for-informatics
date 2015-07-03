@@ -1,0 +1,17 @@
+{
+    "contents" : "require(graphics)\n\n1 - pt(1:5, df = 1)\nqt(.975, df = c(1:10,20,50,100,1000))\n\ntt <- seq(0, 10, len = 21)\nncp <- seq(0, 6, len = 31)\nptn <- outer(tt, ncp, function(t, d) pt(t, df = 3, ncp = d))\nt.tit <- \"Non-central t - Probabilities\"\nimage(tt, ncp, ptn, zlim = c(0,1), main = t.tit)\npersp(tt, ncp, ptn, zlim = 0:1, r = 2, phi = 20, theta = 200, main = t.tit,\n      xlab = \"t\", ylab = \"non-centrality parameter\",\n      zlab = \"Pr(T <= t)\")\n\nplot(function(x) dt(x, df = 3, ncp = 2), -3, 11, ylim = c(0, 0.32),\n     main = \"Non-central t - Density\", yaxs = \"i\")",
+    "created" : 1399556600465.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1966992748",
+    "id" : "FBBF6997",
+    "lastKnownWriteTime" : 1399556606,
+    "path" : "~/Documents/CVUT/SEM2/MIE-SPI/hw2/examples.R",
+    "project_path" : "examples.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

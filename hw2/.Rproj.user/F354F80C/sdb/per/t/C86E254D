@@ -1,0 +1,17 @@
+{
+    "contents" : "n1 = 20;\nn2 = 25;\nalpha = 0.01\nx=rnorm(n1, mean=10, sd=1.3)\ny=rnorm(n2, mean=11.28, sd=1.2)\n\nt.test(x, y=y, paired = FALSE, var.equal = FALSE, conf.level = 1-alpha)\nt.test(x, y=y, paired = FALSE, alternative=\"less\", var.equal = FALSE, conf.level = 1-alpha)\n\nsx2 <- var(x);\nsy2 <- var(y);\nmeanX <- mean(x);\nmeanY <- mean(y);\ndegOfFreedom <- (sx2/n1 + sy2/n2)^2/( (sx2/n1)^2/(n1-1) + (sy2/n2)^2/(n2-1) );\n\n\nsxy <- sqrt (sx2/n1 + sy2/n2)\n\nt <- (meanX - meanY)/sxy;\n\npValue <- pt(t, degOfFreedom);\n\ndegOfFreedom;\npValue;\nt;",
+    "created" : 1399590051454.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "831601139",
+    "id" : "C86E254D",
+    "lastKnownWriteTime" : 1399592234,
+    "path" : "~/Documents/CVUT/SEM2/MIE-SPI/hw2/2.3.R",
+    "project_path" : "2.3.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

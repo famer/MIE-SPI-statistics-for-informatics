@@ -1,0 +1,17 @@
+{
+    "contents" : "n = 20;\nalpha = 0.01\nx = rnorm(n, mean=10, sd=1)\nerror = rnorm(n, mean=0.5, sd=0.8306624)\ny = x + error\n\nt.test(x, y=y, paired = TRUE, alternative = \"less\", conf.level = 1-alpha)\n\ndiff <- x - y;\nt.test(diff, mu=0, alternative=\"less\", conf.level = 1-alpha);",
+    "created" : 1399583548814.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1662524363",
+    "id" : "9F20E903",
+    "lastKnownWriteTime" : 1399588215,
+    "path" : "~/Documents/CVUT/SEM2/MIE-SPI/hw2/2.1.R",
+    "project_path" : "2.1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
